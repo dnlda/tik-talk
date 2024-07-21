@@ -5,6 +5,9 @@
   --dark-color: #000;
   --light-color: #fff;
   --primary-color: #ae7aff;
+  --gray-color: #5f646d;
+  --dark-hover-color: #161616;
+  --light-transparent-color: rgba(255, 255, 255, 0.75);
 }
 
 *,
@@ -23,6 +26,13 @@ body {
   background-image: url(/assets/img/background.svg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.stack-wrapper {
+  height: min-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .skill-tag {
@@ -115,6 +125,43 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-family: "JetBrains Mono", sans-serif;
+}
+
+.tt-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tt-form-label__text {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--light-transparent-color);
+}
+
+.tt-form-input {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  border: none;
+  background: none;
+  color: var(--light-transparent-color);
+  border-bottom: 1px solid var(--light-color);
+  height: 33px;
+
+  &:focus-visible {
+    outline: none;
+    border-bottom: 1px solid var(--primary-color);
+    transition: border-bottom 500ms;
+  }
+}
+
+.tt-text-area {
+ resize: none; 
+ height: 84px; 
 }
 
 .medium-text {

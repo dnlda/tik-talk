@@ -21,8 +21,9 @@ subscribers$ = this.profileService.getSubscribersShortList()
 
 me = this.profileService.me
 
+
   menuItems = [
-    { id: 1, label: 'Моя страница', icon: 'home', link: '' },
+    { id: 1, label: 'Моя страница', icon: 'home', link: `profile/me` },
     { id: 2, label: 'Чаты', icon: 'chat', link: 'chats' },
     { id: 3, label: 'Поиск', icon: 'search', link: '' },
   ];
