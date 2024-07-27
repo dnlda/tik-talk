@@ -4,9 +4,13 @@
     <ul class="main-menu-list">
         @for (menuItem of menuItems; track menuItem.id) {
             <li >
-                <a class="menu-item" [routerLink]="[menuItem.link]">
-                    <img src="/assets/img/{{menuItem.icon}}.svg" alt="home" class="menu-icon">
-                    <span>{{menuItem.label}}</span>
+                <a 
+                    class="menu-item" 
+                    [routerLink]="[menuItem.link]"
+                    routerLinkActive="active"
+                >
+                        <img src="/assets/img/{{menuItem.icon}}.svg" alt="home" class="menu-icon">
+                        <span>{{menuItem.label}}</span>
                 </a>
             </li>
         }
