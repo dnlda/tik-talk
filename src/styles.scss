@@ -62,6 +62,23 @@ body {
   cursor: pointer;
 }
 
+.btn-secondary {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background: var(--dark-color);
+  border-radius: 2px;
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+  font-family: "JetBrains Mono";
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
 .btn-shadow {
   position: relative;
   &:before {

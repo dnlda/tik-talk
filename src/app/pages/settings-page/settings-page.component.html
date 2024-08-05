@@ -33,8 +33,17 @@
             <input type="text" class="tt-form-input" formControlName="stack">
         </label>
     </div>
-    <div>
-        <div>
+    <div class="action-btn_wrapper">
+        <div class="btn_wrapper">
+            <button class="btn-secondary action-btn" (click)="onDeleteAccount()">
+                <img src="/assets/img/delete.svg" alt="">
+            </button>
+            <button class="btn-secondary action-btn" (click)="onLogoutAccount()">
+                <img src="/assets/img/logout.svg" alt="">
+            </button>
+        </div>
+        <div class="btn_wrapper">
+            <button class="btn-secondary">Отмена</button>
             <button class="btn" (click)="onSave()">Сохранить</button>
         </div>
     </div>

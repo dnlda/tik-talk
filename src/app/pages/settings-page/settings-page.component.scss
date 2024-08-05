@@ -16,7 +16,6 @@
 }
 
 .profile-form {
-    
     display: grid;
     grid-gap: 20px;
 }
@@ -25,4 +24,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+}
+
+.action-btn_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn {
+    padding: 14px;
 }

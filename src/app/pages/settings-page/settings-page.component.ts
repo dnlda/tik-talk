@@ -4,6 +4,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ProfileService } from '../../data/service/profile.service';
 import { firstValueFrom } from 'rxjs';
 import { AvatarUploadComponent } from "./avatar-upload/avatar-upload.component";
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-settings-page',
@@ -15,6 +16,7 @@ import { AvatarUploadComponent } from "./avatar-upload/avatar-upload.component";
 export class SettingsPageComponent {
   fb = inject(FormBuilder);
   profileService = inject(ProfileService);
+  authService = inject(AuthService)
 
   @ViewChild(AvatarUploadComponent) avatarUploader!: AvatarUploadComponent
 
@@ -70,5 +72,15 @@ export class SettingsPageComponent {
     if (Array.isArray(stack)) return stack.join(',');
 
     return stack
+  }
+
+  onLogoutAccount () {
+    console.log('Вы вышли из аккаунта')
+    this.authService.logout()
+  }
+
+  onDeleteAccount () {
+    console.log('Вы DELETED YOUR ACCOUNT')
+    this.authService.delete()
   }
 }
